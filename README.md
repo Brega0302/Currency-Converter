@@ -1,59 +1,105 @@
-<header>
+BAM Currency Converter & Predictor v2.0
 
-# Hello GitHub Actions
+Professional MIPS Assembly Financial Suite
 
-_Create and run a GitHub Actions workflow._
+🔹 Description
 
-</header>
+BAM Currency Converter & Predictor v2.0 is a robust, feature-rich financial simulation system developed entirely in MIPS Assembly for the MARS 4.5 simulator.
+The project demonstrates advanced low-level programming concepts such as floating-point arithmetic, structured memory usage, modular subroutines, and interactive terminal-based user interfaces.
 
-## Step 1: Create a workflow file
+Designed as an educational Computer Architecture project, the system simulates real-world currency exchange and trend prediction logic while operating within the constraints of assembly-level programming.
 
-_Welcome to "Hello GitHub Actions"! :wave:_
+💎 Key Features
+⚡ Real-Time Currency Conversion
 
-**What is _GitHub Actions_?**: GitHub Actions is a flexible way to automate nearly every aspect of your team's software workflow. You can automate testing, continuously deploy, review code, manage issues and pull requests, and much more. The best part, these workflows are stored as code in your repository and easily shared and reused across teams. To learn more, check out these resources:
+Supports conversion between 8 major currencies:
+BAM, USD, EUR, CHF, AUD, GBP, TRY, BTC
 
-- The GitHub Actions feature page, see [GitHub Actions](https://github.com/features/actions).
-- The "GitHub Actions" user documentation, see [GitHub Actions](https://docs.github.com/actions).
+Uses high-precision floating-point calculations (up to 7 decimal places) to ensure accurate results, including cryptocurrency values.
 
-**What is a _workflow_?**: A workflow is a configurable automated process that will run one or more jobs. Workflows are defined in special files in the `.github/workflows` directory and they execute based on your chosen event. For this exercise, we'll use a `pull_request` event.
+📈 Trend Prediction Engine
 
-- To read more about workflows, jobs, and events, see "[Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)".
-- If you want to learn more about the `pull_request` event before using it, see "[pull_request](https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#pull_request)".
+Implements a custom prediction algorithm that simulates currency fluctuations across:
 
-To get you started, we ran an Actions workflow in your new repository that, among other things, created a branch for you to work in, called `welcome-workflow`.
+1 week
 
-### :keyboard: Activity: Create a workflow file
+1 month
 
-1. Open a new browser tab, and navigate to this same repository. Then, work on the steps in your second tab while you read the instructions in this tab.
-1. Create a pull request. This will contain all of the changes you'll make throughout this part of the course.
+3 months
 
-   Click the **Pull Requests** tab, click **New pull request**, set `base: main` and `compare:welcome-workflow`, click **Create pull request**, then click **Create pull request** again.
+Predictions are based on predefined historical trend data stored in memory.
 
-1. Navigate to the **Code** tab.
-1. From the **main** branch dropdown, click on the **welcome-workflow** branch.
-1. Navigate to the `.github/workflows/` folder, then select **Add file** and click on **Create new file**.
-1. In the **Name your file** field, enter `welcome.yml`.
-1. Add the following content to the `welcome.yml` file:
+🔄 Live Rate Updates
 
-   ```yaml copy
-   name: Post welcome comment
-   on:
-     pull_request:
-       types: [opened]
-   permissions:
-     pull-requests: write
-   ```
+Allows users to modify exchange rates dynamically during runtime, simulating a live exchange rate feed within the MARS environment.
 
-1. To commit your changes, click **Commit changes**.
-1. Type a commit message, select **Commit directly to the welcome-workflow branch** and click **Commit changes**.
-1. Wait about 20 seconds, then refresh this page (the one you're following instructions from). A separate Actions workflow in the repository (not the workflow you created) will run and will automatically replace the contents of this README file with instructions for the next step.
+🎨 Immersive Terminal UI
 
-<footer>
+Features a cinematic system initialization loading animation with progress bars.
 
----
+Simulates a modern terminal experience entirely through assembly-level UI routines.
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/hello-github-actions) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+🛡️ Robust Error Handling
 
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+Input validation for:
 
-</footer>
+Invalid currency codes
+
+Negative or zero amounts
+
+Invalid menu selections
+
+Prevents undefined behavior and improves user interaction stability.
+
+🛠️ Technical Implementation
+Mathematical Logic
+
+The system uses BAM (Bosnian Mark) as the pivot currency.
+Conversions between two non-base currencies follow this formula:
+
+Result = (Amount × Target_Rate) / Source_Rate
+
+Data Structures
+
+Floating-Point Arrays
+Store exchange rates and prediction values with high precision.
+
+Pointer Arrays
+Dynamically manage currency labels for UI rendering.
+
+Modular Subroutines
+Extensive use of jal (Jump and Link) for reusable logic such as animations, menu handling, and calculations.
+
+🚀 How to Run
+
+Download and install MARS 4.5 MIPS Simulator
+
+Open the .asm file in MARS
+
+Assemble the program (F3 or Wrench & Hammer icon)
+
+Run the program (F5 or Play icon)
+
+Interact using the Run I/O console at the bottom
+
+📊 Supported Currencies (Sample Rates)
+Code	Currency	Base Rate (1 BAM)
+BAM	Bosnian Mark	1.0
+USD	US Dollar	0.563
+EUR	Euro	0.518
+BTC	Bitcoin	0.0000089
+📝 Project Architecture
+├── .data
+│   ├── rates              # Floating-point exchange rates
+│   ├── currencies         # Pointer array for currency labels
+│   └── ui_strings         # UI text and messages
+└── .text
+    ├── main_loop           # System entry point
+    ├── loading_animation   # UI animation subroutine
+    ├── convert_currency   # Conversion logic
+    └── predict_currency   # Trend prediction algorithm
+
+⚖️ Disclaimer
+
+This project is an educational simulation developed for Computer Architecture studies.
+All exchange rates and predictions are hardcoded examples and must not be used for real-world financial decisions.
